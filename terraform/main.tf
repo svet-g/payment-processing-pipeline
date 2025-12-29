@@ -19,6 +19,7 @@ provider "google" {
 resource "google_storage_bucket" "pipeline_bucket" {
   name          = "payment-processing-pipeline-svet-g"
   location      = "EU"
+  force_destroy = true
 
   uniform_bucket_level_access = true
 
@@ -86,7 +87,7 @@ resource "google_secret_manager_secret" "pipeline_sa_secret" {
   secret_id = "payment-pipeline-sa-key"
 
   replication {
-    automatic = true
+    auto {}
   }
 }
 
