@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "svet-g-org"
+    workspaces {
+      name = "payment-processing-pipeline-svet-g"
+    }
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
