@@ -1,3 +1,5 @@
 *venv/
 gh_project_creator.py
 rm.md
+*.terraform
+.env*
