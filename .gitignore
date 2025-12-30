@@ -3,3 +3,9 @@ gh_project_creator.py
 rm.md
 *.terraform
 .env*
+htmlcov
+data/*
+__pycache__
+.coverage
+config/gcp-sa-key.json
+jars/*
