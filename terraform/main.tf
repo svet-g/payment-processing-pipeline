@@ -49,11 +49,6 @@ resource "google_storage_bucket" "pipeline_bucket" {
       storage_class = "ARCHIVE"
     }
   }
-
-  retention_policy {
-    retention_period = 604800  # 7 days
-    is_locked        = false
-  }
 }
 
 ############################
