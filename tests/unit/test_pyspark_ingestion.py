@@ -11,10 +11,10 @@ import tempfile
 import os
 import sys
 
-# Add src directory to path (adjust based on your project structure)
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src', 'ingestion'))
+# Add parent directory to path to import the module
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src')))
 
-from pyspark_ingestion import SWIFTDataIngestor
+from ingestion.pyspark_ingestion import SWIFTDataIngestor
 
 
 @pytest.fixture(scope="session")
